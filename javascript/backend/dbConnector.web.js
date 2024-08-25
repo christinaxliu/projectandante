@@ -30,9 +30,9 @@ export const fetchCountFromDb = webMethod(
         };
 
         return wixData.query(dbConnnectionName)
-            .find(options)
-            .then((results) => {
-                return results.totalCount;
+            .count(options)
+            .then((result) => {
+                return result;
             })
             .catch((err) => {
                 return 0;
