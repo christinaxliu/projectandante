@@ -4,7 +4,8 @@ This is the git repository for ***PROJECT ANDANTE*** (https://www.projectandante
 - **30** full concerts held in senior living centers around the Seattle metropolitan area. 
 
 I designed and built the website for our organization (https://www.projectandante.org). This git repository contains the source code for the javascipt code (both backend and frontend) and SQL scripts:
-- The javascript code that generates the animation and connects
-the website to the backend and database: https://github.com/christinaxliu/projectandante/tree/main/javascript
+- The javascript code for the backend, as well as the frontend that connects
+the website to the backend and database and generates animation: https://github.com/christinaxliu/projectandante/tree/main/javascript
 - SQL for table creation, managing and retrieving data from MySQL database: https://github.com/christinaxliu/projectandante/tree/main/mysql
 
+![ProjectAndanteWebsite](https://github.com/user-attachments/assets/ad034bd1-7d7d-4423-b53d-8430cc8e2aa7)
