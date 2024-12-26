@@ -1,31 +1,31 @@
 /* Update a performer’s data field in the performers table */
 UPDATE
-   performers
+    performers
 SET
-   bio = "bio was updated"
+    bio = "bio was updated"
 WHERE
-   performer_id = 1;
+    performer_id = 1;
 
 /* Update a venue’s data field in the venues table */
 UPDATE
-   venues
+    venues
 SET
-   description = "description was updated"
+    description = "description was updated"
 WHERE
-   venue_id = 1;
+    venue_id = 1;
 
 /* Update a venue’s data field in the concerts table */
 UPDATE
-  concerts
+    concerts
 SET
-  description = "description was updated"
+    description = "description was updated"
 WHERE
-  concert_id = 1;
+    concert_id = 1;
 
 /* Update a performer’s data field in the performers table */
 UPDATE
-   performances
+    performances
 SET
-   Performer_ids = '1,2,3'
+    Performer_ids = '1,2,3'
 WHERE
-   performance_id = 1;
+    performance_id = 1;

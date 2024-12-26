@@ -41,11 +41,11 @@ CREATE TABLE `main_db`.concerts (
 
 /* Create performs table */
 CREATE TABLE performances (
-   performance_id INT NOT NULL AUTO_INCREMENT,
-   concert_id INT NOT NULL,
-   performer_ids VARCHAR(255) NOT NULL,
-   performance_piece_name VARCHAR(255) NULL,
-   performance_type VARCHAR(255) NULL,
-   description TEXT NULL,
-   PRIMARY KEY(performance_id)
+    performance_id INT NOT NULL AUTO_INCREMENT,
+    concert_id INT NOT NULL,
+    performer_ids VARCHAR(255) NOT NULL,
+    performance_piece_name VARCHAR(255) NULL,
+    performance_type VARCHAR(255) NULL,
+    description TEXT NULL,
+    PRIMARY KEY(performance_id)
 );
