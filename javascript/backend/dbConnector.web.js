@@ -24,17 +24,41 @@ import wixData from "wix-data";
 // Backend web module function to fetch count from MySQL (Google Cloud SQL) database
 export const fetchCountFromDb = webMethod(
     Permissions.Anyone, 
-    (dbConnnectionName) => { 
+    (dbCollectionTableName) => { 
         let options = {
           "suppressAuth": true
         };
 
-        return wixData.query(dbConnnectionName)
+        return wixData.query(dbCollectionTableName)
             .count(options)
             .then((result) => {
                 return result;
             })
             .catch((err) => {
+                return 0;
+            }
+        );
+    }
+);
+
+// Backend web module function to fetch rows that satisfy condition from MySQL (Google Cloud SQL) database.
+// The condition is specified by the input parameters: conditionColumnName and conditionColumnValue. The rows
+// that satisfy the following conditions will be returned:
+//   column_name == column_value
+export const fetchRowsByConditionFromDb = webMethod(
+    Permissions.Anyone, 
+    (dbCollectionTableName, conditionColumnName, conditionColumnValue) => { 
+        let options = {
+          "suppressAuth": true
+        };
+
+        return wixData.query(dbCollectionTableName)
+            .eq(conditionColumnName, conditionColumnValue)
+            .find(options)
+            .then((results) => {
+                return results;
+            })
+            .catch((error) => {
                 return 0;
             }
         );
