@@ -29,11 +29,11 @@ $w.onReady(async function() {
         $w("#venueCountLoading").hide();
         $w("#venueCount").show();
 
-	    await countingUpNumber("#performanceCount", 0, performanceCount, "", "");
-		await countingUpNumber("#performerCount", 0, performerCount, "", "");
-		await countingUpNumber("#concertCount", 0, concertCount, "", "");
-		await countingUpNumber("#venueCount", 0, venueCount, "", "");
-	});
+	await countingUpNumber("#performanceCount", 0, performanceCount, "", "");
+	await countingUpNumber("#performerCount", 0, performerCount, "", "");
+	await countingUpNumber("#concertCount", 0, concertCount, "", "");
+	await countingUpNumber("#venueCount", 0, venueCount, "", "");
+    });
 
     // Run the animation to counting up number
     function countingUpNumber(element, startValue, endValue, prefix = "", suffix = "") {       
