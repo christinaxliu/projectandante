@@ -29,3 +29,11 @@ SET
     Performer_ids = '1,2,3'
 WHERE
     performance_id = 1;
+
+/* Update a leader's data field in the leaders table */
+UPDATE
+    leaders
+SET
+    leader_bio = "bio was updated"
+WHERE
+    leader_id = 1;

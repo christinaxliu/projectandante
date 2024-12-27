@@ -53,17 +53,8 @@ CREATE TABLE performances (
 /* Create leaders table */
 CREATE TABLE leaders (
     leader_id INT NOT NULL,
-    leader_position VARCHAR(255) NULL,
-    leader_bio TEXT NULL,
-    PRIMARY KEY(leader_id)
-);
-
-/* Create leaders_info table */
-CREATE TABLE leaders_info (
-    leader_id INT NOT NULL,
     leader_first_name VARCHAR(255) NOT NULL,
     leader_last_name VARCHAR(255) NOT NULL,
-    leader_middle_name VARCHAR(255) NULL,
     leader_position VARCHAR(255) NULL,
     leader_bio TEXT NULL,
     PRIMARY KEY(leader_id)

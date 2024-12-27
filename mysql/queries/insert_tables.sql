@@ -13,3 +13,7 @@ VALUES(1, 2022, 8, 19);
 /* Insert a performance into performances table */
 INSERT INTO performances(concert_id, performer_ids)
 VALUES(1, '1,2');
+
+/* Insert a leader into leaders table */
+INSERT INTO leaders(leader_id, leader_first_name, leader_last_name, leader_position, leader_bio)
+VALUES(1, "Christina", "Liu", "Co-Founder", "bio to be updated");
