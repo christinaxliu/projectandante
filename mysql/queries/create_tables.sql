@@ -53,9 +53,10 @@ CREATE TABLE performances (
 /* Create leaders table */
 CREATE TABLE leaders (
     leader_id INT NOT NULL,
-    leader_first_name VARCHAR(255) NOT NULL,
-    leader_last_name VARCHAR(255) NOT NULL,
-    leader_position VARCHAR(255) NULL,
-    leader_bio TEXT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    position VARCHAR(255) NULL,
+    bio TEXT NULL,
+    profile_pic_uri VARCHAR(2047) NULL,
     PRIMARY KEY(leader_id)
 );

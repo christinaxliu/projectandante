@@ -1,6 +1,6 @@
 /* Insert a performer into performers table */
-INSERT INTO performers(first_name, last_name, school, grade, instruments, bio)
-VALUES("Christina", "Liu", "Lakeside School", 11, "Cellist/Guitarist", "bio to be updated");
+INSERT INTO performers(first_name, last_name, school, grade, instruments, bio, profile_pic_uri)
+VALUES("Christina", "Liu", "Lakeside School", 11, "Cellist/Guitarist", "bio to be updated", "profile pic uri");
 
 /* Insert a venue into venues table */
 INSERT INTO venues(name, address, phone_number, website)
@@ -15,5 +15,5 @@ INSERT INTO performances(concert_id, performer_ids)
 VALUES(1, '1,2');
 
 /* Insert a leader into leaders table */
-INSERT INTO leaders(leader_id, leader_first_name, leader_last_name, leader_position, leader_bio)
-VALUES(1, "Christina", "Liu", "Co-Founder", "bio to be updated");
+INSERT INTO leaders(leader_id, first_name, last_name, position, bio, profile_pic_uri)
+VALUES(1, "Christina", "Liu", "Co-Founder", "bio to be updated", "profile pic uri");

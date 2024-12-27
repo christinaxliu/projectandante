@@ -34,6 +34,6 @@ WHERE
 UPDATE
     leaders
 SET
-    leader_bio = "bio was updated"
+    bio = "bio was updated"
 WHERE
     leader_id = 1;
