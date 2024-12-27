@@ -57,6 +57,7 @@ CREATE TABLE leaders (
     last_name VARCHAR(255) NOT NULL,
     position VARCHAR(255) NULL,
     position_level VARCHAR(255) NULL,
+    sequence_in_postition_level INT NULL,
     bio TEXT NULL,
     profile_pic_uri VARCHAR(2047) NULL,
     PRIMARY KEY(leader_id)
