@@ -15,5 +15,5 @@ INSERT INTO performances(concert_id, performer_ids)
 VALUES(1, '1,2');
 
 /* Insert a leader into leaders table */
-INSERT INTO leaders(leader_id, first_name, last_name, position, position_name, bio, profile_pic_uri)
+INSERT INTO leaders(leader_id, first_name, last_name, position, position_level, bio, profile_pic_uri)
 VALUES(1, "Christina", "Liu", "Co-Founder", "Co-Founder", "bio to be updated", "profile pic uri");
