@@ -11,6 +11,7 @@ CREATE TABLE performers (
     concert_count INT NULL,
     bio TEXT NULL,
     profile_pic_uri VARCHAR(2047) NULL,
+    profile_background_pic_uri VARCHAR(2047) NULL,
     PRIMARY KEY(performer_id)
 );
 
