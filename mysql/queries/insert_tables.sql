@@ -1,6 +1,6 @@
 /* Insert a performer into performers table */
-INSERT INTO performers(first_name, last_name, school, grade, instruments, bio, profile_pic_uri, profile_background_pic_uri)
-VALUES("Christina", "Liu", "Lakeside School", 11, "Cellist/Guitarist", "bio to be updated", "profile pic uri", "profile background pic url");
+INSERT INTO performers(first_name, last_name, school, grade, instruments, bio, profile_pic_uri, profile_background_pic_uri, consent_for_website)
+VALUES("Christina", "Liu", "Lakeside School", 11, "Cellist/Guitarist", "bio to be updated", "profile pic uri", "profile background pic url", 1);
 
 /* Insert a venue into venues table */
 INSERT INTO venues(name, address, phone_number, website)

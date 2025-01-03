@@ -12,6 +12,7 @@ CREATE TABLE performers (
     bio TEXT NULL,
     profile_pic_uri VARCHAR(2047) NULL,
     profile_background_pic_uri VARCHAR(2047) NULL,
+    consent_for_website TINYINT(1) NULL,
     PRIMARY KEY(performer_id)
 );
 
