@@ -65,6 +65,34 @@ export const fetchRowsByConditionFromDb = webMethod(
     }
 );
 
+// Backend web module function to fetch rows that satisfy specified condition and also with consent_for_website = 1
+// from MySQL (Google Cloud SQL) database.
+// The condition is specified by the input parameters: 
+//   conditionColumnName
+//   conditionColumnValue
+// The rows that satisfy the following conditions will be returned:
+//   column_name == column_value
+export const fetchConsentedRowsByConditionFromDb = webMethod(
+    Permissions.Anyone, 
+    (dbCollectionTableName, conditionColumnName, conditionColumnValue) => { 
+        let options = {
+          "suppressAuth": true
+        };
+
+        return wixData.query(dbCollectionTableName)
+            .eq("consent_for_website", 1)
+            .eq(conditionColumnName, conditionColumnValue)
+            .find(options)
+            .then((results) => {
+                return results;
+            })
+            .catch((error) => {
+                return 0;
+            }
+        );
+    }
+);
+
 // Backend web module function to fetch rows that satisfy condition from MySQL (Google Cloud SQL) database and
 // sort the results in the ascending order on the column specified by the orderByColumnName input parameter.
 // The condition is specified by the input parameters: conditionColumnName and conditionColumnValue. The rows
