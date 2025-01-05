@@ -4,7 +4,7 @@
 // to display on the website and also meet the condition specified by the input parameters.
 import { fetchConsentedRowsByConditionFromDb } from "backend/dbConnector.web"
 
-const maxNumPerformers = 200;
+const maxNumPerformers = 300;
 const performerBoxElemPrefix = "#performerBox";
 const performerPicElemPrefix = "#performerPic";
 const performerNameElemPrefix = "#performerName";
@@ -97,7 +97,7 @@ $w.onReady(async function () {
     var sixteenthNotePerformerResults = await fetchConsentedRowsByConditionFromDb(
         "mysqlConnections/performers",
         "andante_level",
-        "Eighth Note Performer");
+        "Sixteenth Note Performer");
     populatePerformersInfo(sixteenthNotePerformerResults, totalNumPerformers);
     totalNumPerformers += sixteenthNotePerformerResults.items.length;
 });
