@@ -7,4 +7,4 @@ I designed and built the website for our organization (https://www.projectandant
 - The javascript code for the service running at the backend, as well as the frontend code that runs at the client side web browser to connect to the backend and database and generates dynamic web content: https://github.com/christinaxliu/projectandante/tree/main/javascript
 - SQL for MySQL database table creation, managing and retrieving data from database: https://github.com/christinaxliu/projectandante/tree/main/mysql
 
-![ProjectAndanteWebsite](https://github.com/user-attachments/assets/ad034bd1-7d7d-4423-b53d-8430cc8e2aa7)
+![Screenshot 2025-01-26 at 12 54 46 PM](https://github.com/user-attachments/assets/6e4c32e2-4c55-4565-ba9b-4ef2b97a5927)
