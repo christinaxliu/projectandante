@@ -4,6 +4,15 @@
 // to display on the website and also meet the condition specified by the input parameters.
 import { fetchConsentedRowsByConditionFromDb } from "backend/dbConnector.web"
 
+const halfNotePerformersBoxElemName = "#halfNotePerformersBox";
+const halfNotePerformersLoadingElemName = "#halfNotePerformersLoading";
+const quarterNotePerformersBoxElemName = "#quarterNotePerformersBox";
+const quarterNotePerformersLoadingElemName = "#quarterNotePerformersLoading";
+const eighthNotePerformersBoxElemName = "#eighthNotePerformersBox";
+const eighthNotePerformersLoadingElemName = "#eighthNotePerformersLoading";
+const sixteenthNotePerformersBoxElemName = "#sixteenthNotePerformersBox";
+const sixteenthNotePerformersLoadingElemName = "#sixteenthNotePerformersLoading";
+
 const maxNumPerformers = 300;
 const performerBoxElemPrefix = "#performerBox";
 const performerPicElemPrefix = "#performerPic";
@@ -69,6 +78,18 @@ function populatePerformersInfo(performerResultsFromDb, numPreviousPerformers) {
 }
 
 $w.onReady(async function () {
+    // Hide the performers box elements and show the loading elements.
+    // Once the performers data is fetched from MySQL database and performers info is rendered,
+    // the loading elements will be hidden and the performers box elements will be shown.
+    $w(halfNotePerformersBoxElemName).hide();
+    $w(halfNotePerformersLoadingElemName).show();
+    $w(quarterNotePerformersBoxElemName).hide();
+    $w(quarterNotePerformersLoadingElemName).show();
+    $w(eighthNotePerformersBoxElemName).hide();
+    $w(eighthNotePerformersLoadingElemName).show();
+    $w(sixteenthNotePerformersBoxElemName).hide();
+    $w(sixteenthNotePerformersLoadingElemName).show();
+
     // Call backend web module to fetch half notes performers from MySQL (Google Cloud SQL) database.
     var halfNotePerformerResults = await fetchConsentedRowsByConditionFromDb(
         "mysqlConnections/performers",
@@ -76,6 +97,11 @@ $w.onReady(async function () {
         "Half Note Performer");
     populatePerformersInfo(halfNotePerformerResults, totalNumPerformers);
     totalNumPerformers += halfNotePerformerResults.items.length;
+
+    // The half note performers data is fetched from MySQL database and performers info is rendered,
+    // hide the loading elements and show the half note performers box elements.
+    $w(halfNotePerformersLoadingElemName).hide();
+    $w(halfNotePerformersBoxElemName).show()
 
     // Call backend web module to fetch quarter notes performers from MySQL (Google Cloud SQL) database.
     var quarterNotePerformerResults = await fetchConsentedRowsByConditionFromDb(
@@ -85,6 +111,11 @@ $w.onReady(async function () {
     populatePerformersInfo(quarterNotePerformerResults, totalNumPerformers);
     totalNumPerformers += quarterNotePerformerResults.items.length;
 
+    // The quarter note performers data is fetched from MySQL database and performers info is rendered,
+    // hide the loading elements and show the quarter note performers box elements.
+    $w(quarterNotePerformersLoadingElemName).hide();
+    $w(quarterNotePerformersBoxElemName).show();
+
     // Call backend web module to fetch eighth notes performers from MySQL (Google Cloud SQL) database.
     var eighthNotePerformerResults = await fetchConsentedRowsByConditionFromDb(
         "mysqlConnections/performers",
@@ -93,6 +124,11 @@ $w.onReady(async function () {
     populatePerformersInfo(eighthNotePerformerResults, totalNumPerformers);
     totalNumPerformers += eighthNotePerformerResults.items.length;
 
+    // The eighth note performers data is fetched from MySQL database and performers info is rendered,
+    // hide the loading elements and show the eighth note performers box elements.
+    $w(eighthNotePerformersLoadingElemName).hide();
+    $w(eighthNotePerformersBoxElemName).show();
+
     // Call backend web module to fetch sixteenth notes performers from MySQL (Google Cloud SQL) database.
     var sixteenthNotePerformerResults = await fetchConsentedRowsByConditionFromDb(
         "mysqlConnections/performers",
@@ -100,6 +136,11 @@ $w.onReady(async function () {
         "Sixteenth Note Performer");
     populatePerformersInfo(sixteenthNotePerformerResults, totalNumPerformers);
     totalNumPerformers += sixteenthNotePerformerResults.items.length;
+
+    // The sixteenth note performers data is fetched from MySQL database and performers info is rendered,
+    // hide the loading elements and show the sixteenth note performers box elements.
+    $w(sixteenthNotePerformersLoadingElemName).hide();
+    $w(sixteenthNotePerformersBoxElemName).show();    
 });
 
 for (let i = 0; i < maxNumPerformers; i++) {
