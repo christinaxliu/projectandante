@@ -8,3 +8,4 @@ I designed and built the website for our organization (https://www.projectandant
 - SQL for MySQL database table creation, managing and retrieving data from database: https://github.com/christinaxliu/projectandante/tree/main/mysql
 
 ![Screenshot 2025-01-26 at 12 54 46 PM](https://github.com/user-attachments/assets/6e4c32e2-4c55-4565-ba9b-4ef2b97a5927)
+![Screenshot 2025-01-26 at 1 07 03 PM](https://github.com/user-attachments/assets/0f54e5aa-8e9d-4431-8353-9f87b5532968)
