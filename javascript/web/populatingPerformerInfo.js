@@ -26,6 +26,18 @@ var totalNumPerformers = 0;
 var performerPicSrcs = [];
 var performerBackgroundPicSrcs = [];
 
+// Hide the performers box elements and show the loading elements.
+// Once the performers data is fetched from MySQL database and performers info is rendered,
+// the loading elements will be hidden and the performers box elements will be shown.
+$w(halfNotePerformersBoxElemName).hide();
+$w(halfNotePerformersLoadingElemName).show();
+$w(quarterNotePerformersBoxElemName).hide();
+$w(quarterNotePerformersLoadingElemName).show();
+$w(eighthNotePerformersBoxElemName).hide();
+$w(eighthNotePerformersLoadingElemName).show();
+$w(sixteenthNotePerformersBoxElemName).hide();
+$w(sixteenthNotePerformersLoadingElemName).show();
+
 // Set the performer background profile pic to the default pic initially.
 // They will be set to the corresponding performer background profile pics after fetching performer data
 // from database.
@@ -78,18 +90,6 @@ function populatePerformersInfo(performerResultsFromDb, numPreviousPerformers) {
 }
 
 $w.onReady(async function () {
-    // Hide the performers box elements and show the loading elements.
-    // Once the performers data is fetched from MySQL database and performers info is rendered,
-    // the loading elements will be hidden and the performers box elements will be shown.
-    $w(halfNotePerformersBoxElemName).hide();
-    $w(halfNotePerformersLoadingElemName).show();
-    $w(quarterNotePerformersBoxElemName).hide();
-    $w(quarterNotePerformersLoadingElemName).show();
-    $w(eighthNotePerformersBoxElemName).hide();
-    $w(eighthNotePerformersLoadingElemName).show();
-    $w(sixteenthNotePerformersBoxElemName).hide();
-    $w(sixteenthNotePerformersLoadingElemName).show();
-
     // Call backend web module to fetch half notes performers from MySQL (Google Cloud SQL) database.
     var halfNotePerformerResults = await fetchConsentedRowsByConditionFromDb(
         "mysqlConnections/performers",
