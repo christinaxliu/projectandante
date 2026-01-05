@@ -1,7 +1,7 @@
 This is the git repository for ***PROJECT ANDANTE*** (https://www.projectandante.org), a youth-run nonprofit organization that provides a platform for talented young musicians performing concerts at senior living centers. Established in 2022, we have had:
-- **455** individual performances in our concerts
-- **142** unique performers from **20+** schools
-- **41** concerts held in senior living centers around the Seattle metropolitan area
+- **476** individual performances in our concerts
+- **151** unique performers from **20+** schools
+- **43** concerts held in senior living centers around the Seattle metropolitan area
 - **16** unique senior living centers hosted our concerts
 
 I designed and built the website for our organization (https://www.projectandante.org). This git repository contains the source code for the javascript code (both backend and frontend) and SQL scripts:
