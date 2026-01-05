@@ -9,4 +9,6 @@ I designed and built the website for our organization (https://www.projectandant
 - SQL for MySQL database table creation, managing and retrieving data from database, as well Google CloudSQL setup instructions: https://github.com/christinaxliu/projectandante/tree/main/mysql
 
 <img width="1192" height="994" alt="ProjectAndanteWebsite" src="https://github.com/user-attachments/assets/52053344-5f64-4ef4-b1c8-9a2286a17d5e" />
-<img width="1235" height="1110" alt="ProjectAndanteTheNumbers" src="https://github.com/user-attachments/assets/56da4f9b-768a-49e4-8c87-9480d3667fe4" />
+<br><br>
+<br><br>
+<img width="1088" height="1025" alt="ProjectAndanteTheNumbers" src="https://github.com/user-attachments/assets/3e49ff92-4819-4735-b7fe-20e62262bc9d" />
